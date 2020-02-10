@@ -9,6 +9,7 @@ using base_project.Entities.Request;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using base_project.Exceptions;
 
 namespace base_project.Controllers
 {
@@ -40,6 +41,9 @@ namespace base_project.Controllers
         [Produces(MediaTypeNames.Application.Json)]
         public async Task<ActionResult<UsersEntity>> Create([FromBody] UsersEntity usersRequest)
         {
+            var validator = usersRequest.Validate();
+            if(!validator.IsValid)
+                throw new BusinessValidationException(validator.ToString());
             bool result = await _service.CreateUsers(usersRequest);            
             return Ok(result);
         }
