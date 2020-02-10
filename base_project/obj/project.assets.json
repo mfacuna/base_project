@@ -14,6 +14,18 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Mvc.Versioning/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Versioning.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Versioning.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Razor/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -344,6 +356,27 @@
           }
         }
       },
+      "Microsoft.Data.Sqlite.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
+      "Microsoft.DotNet.PlatformAbstractions/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -409,6 +442,34 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "3.1.1",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "3.1.1",
+          "Microsoft.DotNet.PlatformAbstractions": "3.1.1",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.1",
+          "Microsoft.Extensions.DependencyModel": "3.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.SqlServer/3.1.1": {
@@ -531,6 +592,18 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.DependencyModel/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll": {}
+        }
+      },
       "Microsoft.Extensions.Logging/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -553,6 +626,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Debug/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "3.1.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.dll": {}
         }
       },
       "Microsoft.Extensions.Options/3.1.1": {
@@ -623,6 +708,19 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
+      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.1.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -647,6 +745,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
         }
       },
       "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.1": {
@@ -690,6 +800,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -1002,6 +1124,105 @@
           }
         }
       },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.2",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/netcoreapp3.0/SQLitePCLRaw.nativelibrary.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/netcoreapp3.0/SQLitePCLRaw.nativelibrary.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/alpine-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/linux-arm/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-armel/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-armel"
+          },
+          "runtimes/linux-musl-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x86/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x86"
+          },
+          "runtimes/osx-x64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-arm64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -1012,6 +1233,18 @@
         },
         "build": {
           "build/Swashbuckle.AspNetCore.props": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Annotations/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.dll": {}
         }
       },
       "Swashbuckle.AspNetCore.Swagger/5.0.0": {
@@ -2393,6 +2626,15 @@
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
+      "System.Text.Json/4.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        }
+      },
       "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2561,6 +2803,22 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.xml",
         "microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.html.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.Versioning/4.1.1": {
+      "sha512": "ioFhRz5gm2Ny+t758Jab638eTG8Uui++klcH00EgBuU/BQbjkbFY+9xw/CkoAChIcrJsoQP2NKDYJ09zN5jR0g==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.versioning/4.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Versioning.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Versioning.pdb",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Versioning.xml",
+        "microsoft.aspnetcore.mvc.versioning.4.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.versioning.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Razor/2.2.0": {
@@ -2962,6 +3220,40 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Data.SqlClient.pdb"
       ]
     },
+    "Microsoft.Data.Sqlite.Core/3.1.1": {
+      "sha512": "AuINVQClKLK3efVFs2YZHcAupwKI9jLDL8neO/NDbi0fFM+YgT7YbJOj/+YBlnuztcbfL1gfLex4DqNbkl2Lyg==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.core.3.1.1.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
+      ]
+    },
+    "Microsoft.DotNet.PlatformAbstractions/3.1.1": {
+      "sha512": "5lV+Vejn4bKC3wEUPH2Z/FTYkaHBO0AVJqqTD+ATE0rP6jQARIJbtWKc+aF2TWGsxFeiARW8Y0lnMFHdLOJFqA==",
+      "type": "package",
+      "path": "microsoft.dotnet.platformabstractions/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+        "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+        "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+        "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.xml",
+        "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+        "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+        "microsoft.dotnet.platformabstractions.3.1.1.nupkg.sha512",
+        "microsoft.dotnet.platformabstractions.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/3.1.1": {
       "sha512": "RtDC52x7p57sG5ajCisHSRXjqQvtJgR0wUufXWNPDZCjvoqgQcbftWdh2+ogDJ5V58Qf9uhfJQSNXr0qQ597xQ==",
       "type": "package",
@@ -3032,6 +3324,33 @@
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.xml",
         "microsoft.entityframeworkcore.relational.3.1.1.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite/3.1.1": {
+      "sha512": "ifkBawa9Ll7oUWQneeBgEgtGnGwERc3v1tha6z5aCQ7IuqTUb6Vakd/jkETzbS1EtaODWWsYsLQIYwfDXLhP1w==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlite/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/_._",
+        "microsoft.entityframeworkcore.sqlite.3.1.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/3.1.1": {
+      "sha512": "xgSWaNDEWKjIpZSstoKD5DeGZP0jdpoUqHF4lYkY82RtZa8sgyuLjx83XV8bBcz6qxAdHQFxXMnP5DUT0Fnc3w==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlite.core/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.xml",
+        "microsoft.entityframeworkcore.sqlite.core.3.1.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.SqlServer/3.1.1": {
@@ -3213,6 +3532,28 @@
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.DependencyModel/3.1.1": {
+      "sha512": "JjNCPx5Jbk7WTjaFI9Kyq+ZRVwMJ7Ee2AmgLKraQUS8AuciAO+euxHAhlhv0AWCsVyibyRr+5USxjyc7U6VsMA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencymodel/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+        "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+        "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
+        "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.xml",
+        "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll",
+        "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+        "microsoft.extensions.dependencymodel.3.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencymodel.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Logging/3.1.1": {
       "sha512": "SykGku44CIQJRM+eUzB61bGVNv0Lmgx70UAmhu1XLFXhP4I0rBSNJusfOlEpDN8T5JQsykIuM2lOd8J8nTnfAg==",
       "type": "package",
@@ -3241,6 +3582,22 @@
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "microsoft.extensions.logging.abstractions.3.1.1.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Debug/3.1.1": {
+      "sha512": "L50f1F9ZdvvBmGvdoUONsh6ScUtG+mP8TEYMHMKR3a0cSPYMHv28GnNPhbXY5zN0fr53So0I8SR2M02utn2zNQ==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.debug/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.xml",
+        "microsoft.extensions.logging.debug.3.1.1.nupkg.sha512",
+        "microsoft.extensions.logging.debug.nuspec"
       ]
     },
     "Microsoft.Extensions.Options/3.1.1": {
@@ -3364,6 +3721,20 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.1": {
+      "sha512": "As3HZwVDwdFRKrZ5gWflHTolau+Rkb3P6YAZt9Ob+tcQdlRL5y0tDYNE1DMQIWc6rcn7LtlttT3/0FLd6A9Qjg==",
+      "type": "package",
+      "path": "microsoft.visualstudio.web.codegeneration/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
+        "microsoft.visualstudio.web.codegeneration.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.nuspec"
+      ]
+    },
     "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.1": {
       "sha512": "xiMVRctA0xwCbm1aYF1wbJJn77PNK/u734q4C5TnqczK4T87OqRJjbX1ldl+PJE5sw3e/8H/j9NNYzL2ux3wng==",
       "type": "package",
@@ -3390,6 +3761,29 @@
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
         "microsoft.visualstudio.web.codegeneration.core.3.1.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.core.nuspec"
+      ]
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.1": {
+      "sha512": "dPuG5OJUL/1mlToWYhu83qYQymr24n7uDRrSTn46rejVlON6OLtTqZNve5CcppR0NtHkalINrOjlY+0dXNnAKg==",
+      "type": "package",
+      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/dotnet-aspnet-codegenerator-design.exe",
+        "lib/net461/dotnet-aspnet-codegenerator-design.xml",
+        "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll",
+        "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.xml",
+        "microsoft.visualstudio.web.codegeneration.design.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.design.nuspec",
+        "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.exe",
+        "runtimes/win-arm/lib/net461/dotnet-aspnet-codegenerator-design.xml",
+        "runtimes/win-arm64/lib/net461/dotnet-aspnet-codegenerator-design.exe",
+        "runtimes/win-arm64/lib/net461/dotnet-aspnet-codegenerator-design.xml",
+        "runtimes/win7-x64/lib/net461/dotnet-aspnet-codegenerator-design.exe",
+        "runtimes/win7-x64/lib/net461/dotnet-aspnet-codegenerator-design.xml",
+        "runtimes/win7-x86/lib/net461/dotnet-aspnet-codegenerator-design.exe",
+        "runtimes/win7-x86/lib/net461/dotnet-aspnet-codegenerator-design.xml"
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.1": {
@@ -3433,6 +3827,306 @@
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
         "microsoft.visualstudio.web.codegeneration.utils.3.1.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.utils.nuspec"
+      ]
+    },
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.1": {
+      "sha512": "U+ud8PSdPOxnRMPNZcuppp5vS+PbY2nzHVNvcD1u/RYzG8jXVtrwlDkFLazbEsR7/8uym2UbdvQ5qKEcSkzPXA==",
+      "type": "package",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Generators/ParameterDefinitions/area.json",
+        "Generators/ParameterDefinitions/controller.json",
+        "Generators/ParameterDefinitions/identity.json",
+        "Generators/ParameterDefinitions/razorpage.json",
+        "Generators/ParameterDefinitions/view.json",
+        "Icon.png",
+        "Templates/ControllerGenerator/ApiControllerWithActions.cshtml",
+        "Templates/ControllerGenerator/ApiControllerWithContext.cshtml",
+        "Templates/ControllerGenerator/ApiEmptyController.cshtml",
+        "Templates/ControllerGenerator/ControllerWithActions.cshtml",
+        "Templates/ControllerGenerator/EmptyController.cshtml",
+        "Templates/ControllerGenerator/MvcControllerWithContext.cshtml",
+        "Templates/Identity/Data/ApplicationDbContext.cshtml",
+        "Templates/Identity/Data/ApplicationUser.cshtml",
+        "Templates/Identity/IdentityHostingStartup.cshtml",
+        "Templates/Identity/Pages/Account/Account.AccessDenied.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.AccessDenied.cshtml",
+        "Templates/Identity/Pages/Account/Account.ConfirmEmail.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ConfirmEmail.cshtml",
+        "Templates/Identity/Pages/Account/Account.ConfirmEmailChange.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ConfirmEmailChange.cshtml",
+        "Templates/Identity/Pages/Account/Account.ExternalLogin.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ExternalLogin.cshtml",
+        "Templates/Identity/Pages/Account/Account.ForgotPassword.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ForgotPassword.cshtml",
+        "Templates/Identity/Pages/Account/Account.ForgotPasswordConfirmation.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ForgotPasswordConfirmation.cshtml",
+        "Templates/Identity/Pages/Account/Account.Lockout.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.Lockout.cshtml",
+        "Templates/Identity/Pages/Account/Account.Login.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.Login.cshtml",
+        "Templates/Identity/Pages/Account/Account.LoginWith2fa.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.LoginWith2fa.cshtml",
+        "Templates/Identity/Pages/Account/Account.LoginWithRecoveryCode.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.LoginWithRecoveryCode.cshtml",
+        "Templates/Identity/Pages/Account/Account.Logout.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.Logout.cshtml",
+        "Templates/Identity/Pages/Account/Account.Register.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.Register.cshtml",
+        "Templates/Identity/Pages/Account/Account.RegisterConfirmation.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.RegisterConfirmation.cshtml",
+        "Templates/Identity/Pages/Account/Account.ResetPassword.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ResetPassword.cshtml",
+        "Templates/Identity/Pages/Account/Account.ResetPasswordConfirmation.cs.cshtml",
+        "Templates/Identity/Pages/Account/Account.ResetPasswordConfirmation.cshtml",
+        "Templates/Identity/Pages/Account/Account._StatusMessage.cshtml",
+        "Templates/Identity/Pages/Account/Account._ViewImports.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ChangePassword.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ChangePassword.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.DeletePersonalData.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.DeletePersonalData.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.Disable2fa.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.Disable2fa.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.DownloadPersonalData.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.DownloadPersonalData.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.Email.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.Email.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.EnableAuthenticator.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.EnableAuthenticator.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ExternalLogins.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ExternalLogins.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.GenerateRecoveryCodes.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.GenerateRecoveryCodes.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.Index.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.Index.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ManageNavPages.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.PersonalData.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.PersonalData.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ResetAuthenticator.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ResetAuthenticator.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.SetPassword.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.SetPassword.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ShowRecoveryCodes.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.ShowRecoveryCodes.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.TwoFactorAuthentication.cs.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage.TwoFactorAuthentication.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage._Layout.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage._ManageNav.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage._StatusMessage.cshtml",
+        "Templates/Identity/Pages/Account/Manage/Account.Manage._ViewImports.cshtml",
+        "Templates/Identity/Pages/Error.cs.cshtml",
+        "Templates/Identity/Pages/Error.cshtml",
+        "Templates/Identity/Pages/_Layout.cshtml",
+        "Templates/Identity/Pages/_ValidationScriptsPartial.cshtml",
+        "Templates/Identity/Pages/_ViewImports.cshtml",
+        "Templates/Identity/Pages/_ViewStart.cshtml",
+        "Templates/Identity/ScaffoldingReadme.cshtml",
+        "Templates/Identity/SupportPages._CookieConsentPartial.cshtml",
+        "Templates/Identity/SupportPages._ViewImports.cshtml",
+        "Templates/Identity/SupportPages._ViewStart.cshtml",
+        "Templates/Identity/_LoginPartial.cshtml",
+        "Templates/Identity/wwwroot/css/site.css",
+        "Templates/Identity/wwwroot/favicon.ico",
+        "Templates/Identity/wwwroot/js/site.js",
+        "Templates/Identity/wwwroot/lib/bootstrap/LICENSE",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+        "Templates/Identity/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+        "Templates/Identity/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+        "Templates/Identity/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+        "Templates/Identity/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+        "Templates/Identity/wwwroot/lib/jquery-validation/LICENSE.md",
+        "Templates/Identity/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+        "Templates/Identity/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+        "Templates/Identity/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+        "Templates/Identity/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+        "Templates/Identity/wwwroot/lib/jquery/LICENSE.txt",
+        "Templates/Identity/wwwroot/lib/jquery/dist/jquery.js",
+        "Templates/Identity/wwwroot/lib/jquery/dist/jquery.min.js",
+        "Templates/Identity/wwwroot/lib/jquery/dist/jquery.min.map",
+        "Templates/Identity_Versioned/Bootstrap3/Data/ApplicationDbContext.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Data/ApplicationUser.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/IdentityHostingStartup.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.AccessDenied.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.AccessDenied.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ConfirmEmail.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ConfirmEmail.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ConfirmEmailChange.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ConfirmEmailChange.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ExternalLogin.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ExternalLogin.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ForgotPassword.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ForgotPassword.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ForgotPasswordConfirmation.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ForgotPasswordConfirmation.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Lockout.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Lockout.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Login.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Login.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.LoginWith2fa.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.LoginWith2fa.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.LoginWithRecoveryCode.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.LoginWithRecoveryCode.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Logout.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Logout.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Register.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.Register.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.RegisterConfirmation.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.RegisterConfirmation.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResetPassword.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResetPassword.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResetPasswordConfirmation.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account.ResetPasswordConfirmation.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account._StatusMessage.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Account._ViewImports.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ChangePassword.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ChangePassword.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.DeletePersonalData.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.DeletePersonalData.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.Disable2fa.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.Disable2fa.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.DownloadPersonalData.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.DownloadPersonalData.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.Email.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.Email.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.EnableAuthenticator.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.EnableAuthenticator.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ExternalLogins.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ExternalLogins.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.GenerateRecoveryCodes.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.GenerateRecoveryCodes.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.Index.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.Index.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ManageNavPages.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.PersonalData.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.PersonalData.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ResetAuthenticator.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ResetAuthenticator.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.SetPassword.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.SetPassword.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ShowRecoveryCodes.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.ShowRecoveryCodes.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.TwoFactorAuthentication.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage.TwoFactorAuthentication.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage._Layout.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage._ManageNav.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage._StatusMessage.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Account/Manage/Account.Manage._ViewImports.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Error.cs.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/Error.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/_Layout.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/_ValidationScriptsPartial.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/_ViewImports.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/Pages/_ViewStart.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/ScaffoldingReadme.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/SupportPages._CookieConsentPartial.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/SupportPages._ViewImports.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/SupportPages._ViewStart.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/_LoginPartial.cshtml",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/css/site.css",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/favicon.ico",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/images/banner1.svg",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/images/banner2.svg",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/images/banner3.svg",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/js/site.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/LICENSE",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/bootstrap/dist/js/npm.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation/LICENSE.md",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery/LICENSE.txt",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery/dist/jquery.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery/dist/jquery.min.js",
+        "Templates/Identity_Versioned/Bootstrap3/wwwroot/lib/jquery/dist/jquery.min.map",
+        "Templates/MvcLayout/Error.cshtml",
+        "Templates/MvcLayout/_Layout.cshtml",
+        "Templates/RazorPageGenerator/Create.cshtml",
+        "Templates/RazorPageGenerator/CreatePageModel.cshtml",
+        "Templates/RazorPageGenerator/Delete.cshtml",
+        "Templates/RazorPageGenerator/DeletePageModel.cshtml",
+        "Templates/RazorPageGenerator/Details.cshtml",
+        "Templates/RazorPageGenerator/DetailsPageModel.cshtml",
+        "Templates/RazorPageGenerator/Edit.cshtml",
+        "Templates/RazorPageGenerator/EditPageModel.cshtml",
+        "Templates/RazorPageGenerator/Empty.cshtml",
+        "Templates/RazorPageGenerator/EmptyPageModel.cshtml",
+        "Templates/RazorPageGenerator/List.cshtml",
+        "Templates/RazorPageGenerator/ListPageModel.cshtml",
+        "Templates/RazorPageGenerator/_ValidationScriptsPartial.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/Create.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/CreatePageModel.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/Delete.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/DeletePageModel.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/Details.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/DetailsPageModel.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/Edit.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/EditPageModel.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/Empty.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/EmptyPageModel.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/List.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/ListPageModel.cshtml",
+        "Templates/RazorPageGenerator_Versioned/Bootstrap3/_ValidationScriptsPartial.cshtml",
+        "Templates/Startup/ReadMe.cshtml",
+        "Templates/Startup/Startup.cshtml",
+        "Templates/ViewGenerator/Create.cshtml",
+        "Templates/ViewGenerator/Delete.cshtml",
+        "Templates/ViewGenerator/Details.cshtml",
+        "Templates/ViewGenerator/Edit.cshtml",
+        "Templates/ViewGenerator/Empty.cshtml",
+        "Templates/ViewGenerator/List.cshtml",
+        "Templates/ViewGenerator/_ValidationScriptsPartial.cshtml",
+        "Templates/ViewGenerator_Versioned/Bootstrap3/Create.cshtml",
+        "Templates/ViewGenerator_Versioned/Bootstrap3/Delete.cshtml",
+        "Templates/ViewGenerator_Versioned/Bootstrap3/Details.cshtml",
+        "Templates/ViewGenerator_Versioned/Bootstrap3/Edit.cshtml",
+        "Templates/ViewGenerator_Versioned/Bootstrap3/Empty.cshtml",
+        "Templates/ViewGenerator_Versioned/Bootstrap3/List.cshtml",
+        "Templates/ViewGenerator_Versioned/Bootstrap3/_ValidationScriptsPartial.cshtml",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll",
+        "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.xml",
+        "lib/netstandard2.0/bootstrap3_identitygeneratorfilesconfig.json",
+        "lib/netstandard2.0/bootstrap4_identitygeneratorfilesconfig.json",
+        "microsoft.visualstudio.web.codegenerators.mvc.3.1.1.nupkg.sha512",
+        "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
@@ -3860,6 +4554,78 @@
         "version.txt"
       ]
     },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+      "sha512": "OVPI/nh5AqfLCIKhAYqjCa6AHhc7oKApGcGM3UhMRSerFiBx58nSpGwxVFdMgjOCWZR+fA49nzsnKlWp5hFo8w==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.tvOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netcoreapp3.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp3.0/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.0.2": {
+      "sha512": "TFSBX426OelS1tkaVC254NVVlrJIe9YLhWPkEvuqJj2104QpmDmEYOhfdfDJD1E/2SmqDhoRw1ek5cQHj8olcQ==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.0.2.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+      "sha512": "S+Tsqe/M7wsc+9HeediI6UHtBKf2X586aRwhi1aBVLGe0WxkAo52O9ZxwEy/v8XMLefcrEMupd2e9CDlIT6QCw==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "lib/net461/_._",
+        "lib/netstandard2.0/_._",
+        "runtimes/alpine-x64/native/libe_sqlite3.so",
+        "runtimes/linux-arm/native/libe_sqlite3.so",
+        "runtimes/linux-arm64/native/libe_sqlite3.so",
+        "runtimes/linux-armel/native/libe_sqlite3.so",
+        "runtimes/linux-musl-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x86/native/libe_sqlite3.so",
+        "runtimes/osx-x64/native/libe_sqlite3.dylib",
+        "runtimes/win-arm/native/e_sqlite3.dll",
+        "runtimes/win-arm64/native/e_sqlite3.dll",
+        "runtimes/win-x64/native/e_sqlite3.dll",
+        "runtimes/win-x86/native/e_sqlite3.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/e_sqlite3.dll",
+        "sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
+      "sha512": "ZSwacbKJUsxJEZxwT23uZVrGbaIvXcADZDz5Sr66fikO5eehdcceDncjzwzTzWfW13di8gpTpstx3WJSt/Ci5Q==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll",
+        "sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
+        "sqlitepclraw.provider.dynamic_cdecl.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/5.0.0": {
       "sha512": "HoJbhDNyeDqr2R1H3YhtPqGacxgZKBFBS6g5U3tlJpv80G/IHW8hHbcnHSTXZpcatnD+xh8UiUrKp4Ua857LSQ==",
       "type": "package",
@@ -3870,6 +4636,21 @@
         "build/Swashbuckle.AspNetCore.props",
         "swashbuckle.aspnetcore.5.0.0.nupkg.sha512",
         "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Annotations/5.0.0": {
+      "sha512": "HrCFKfQNFFEdCdbsMiuZK2NDYlIR1Osik46XK4X3rJlDKngdMrGenUb2ax7JWO5wEr77OGPEMidQ39fgCyTaDQ==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.annotations/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Annotations.xml",
+        "swashbuckle.aspnetcore.annotations.5.0.0.nupkg.sha512",
+        "swashbuckle.aspnetcore.annotations.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore.Swagger/5.0.0": {
@@ -7460,6 +8241,27 @@
         "version.txt"
       ]
     },
+    "System.Text.Json/4.7.0": {
+      "sha512": "IPq/x/d5nAcnD3vIyM3AbPOaTgcqrh0AqPSx7U53UFu3M6k1TH1u/eXc9/h4jm/3mpP1WRUpevlPY4PACd7AWw==",
+      "type": "package",
+      "path": "system.text.json/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.4.7.0.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.RegularExpressions/4.3.0": {
       "sha512": "RpT2DA+L660cBt1FssIE9CAGpLFdFPuheB7pLpKpn6ZXNby7jDERe8Ua/Ne2xGiwLVG2JOqziiaVCGDon5sKFA==",
       "type": "package",
@@ -8028,11 +8830,16 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNetCore.Mvc.Versioning >= 4.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.1",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.1",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.1",
+      "Microsoft.Extensions.Logging.Debug >= 3.1.1",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore >= 3.1.1",
-      "Swashbuckle.AspNetCore >= 5.0.0"
+      "Swashbuckle.AspNetCore >= 5.0.0",
+      "Swashbuckle.AspNetCore.Annotations >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -8076,6 +8883,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Versioning": {
+            "target": "Package",
+            "version": "[4.1.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -8086,9 +8897,21 @@
             "target": "Package",
             "version": "[3.1.1, )"
           },
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "Microsoft.Extensions.Logging.Debug": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.1, )"
           },
@@ -8097,6 +8920,10 @@
             "version": "[3.1.1, )"
           },
           "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
+          "Swashbuckle.AspNetCore.Annotations": {
             "target": "Package",
             "version": "[5.0.0, )"
           }

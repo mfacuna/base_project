@@ -1,0 +1,1 @@
+Scaffolding Console: Scaffold-DbContext "Data Source=localhost;Initial Catalog=db_base_project;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force

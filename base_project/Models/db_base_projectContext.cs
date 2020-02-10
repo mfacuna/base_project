@@ -30,15 +30,23 @@ namespace base_project.Models
         {
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasNoKey();
+                entity.Property(e => e.UserId).HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.Active)
+                    .IsRequired()
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.CreationDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getutcdate())");
 
                 entity.Property(e => e.Mail)
-                    .HasMaxLength(255)
-                    .IsFixedLength();
+                    .IsRequired()
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Password)
-                    .HasMaxLength(255)
-                    .IsFixedLength();
+                    .IsRequired()
+                    .HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

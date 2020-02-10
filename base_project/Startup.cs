@@ -2,10 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using base_project.Contracts;
+using base_project.Extensions;
+using base_project.Models;
+using base_project.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,12 +32,21 @@ namespace base_project
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddControllers();
+			var connectionString = Configuration.GetValue<string>("ConnectionStrings:DbBaseProject");
 
+			services.AddScoped<IUsersService, UsersService>(serviceProvider => { return new UsersService(); });
+
+			services.AddControllers();
+			services.AddDbContext<db_base_projectContext>(options => options.UseSqlServer(connectionString));
 			// Register the Swagger  generator, defining 1 or more Swagger documents 
-			services.AddSwaggerGen(c =>
+			services.AddSwaggerDocumentation();
+
+			services.AddApiVersioning(o =>
 			{
-				c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "API Base", Version = "v1" });
+				o.ReportApiVersions = true;
+				o.AssumeDefaultVersionWhenUnspecified = true;
+				o.DefaultApiVersion = new ApiVersion(1, 0);
+				o.ApiVersionReader = new HeaderApiVersionReader("api-version");
 			});
 		}
 
@@ -44,7 +59,7 @@ namespace base_project
 			}
 
 			// Enable middleware to serve generated Swagger as a JSON endpoint.
-			app.UseSwagger();
+			app.UseSwaggerDocumentation();
 
 			// Enable middleware to Serve swagger-ui (HTML, JS, CSS, etc..),
 			// spacifying the Swagger JSON endpoint.
